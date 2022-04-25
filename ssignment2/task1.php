@@ -5,7 +5,8 @@
   $x=5;
   $y=1;
   $arm = "153";
-  $str2 = "Eva";
+  $str2 = "MOM";
+  $arr1 = array(1, 2, 3, 2, 4, 1);
 
 //   echo $x[0];
 
@@ -75,6 +76,27 @@ function ifPalindrome($str2){
     }
 }
 
+function dubremove($arr1){
+    for($i=0; $i < count($arr1); $i++){
+        for($e=0; $e < count($arr1); $e++){
+            if($i == $e)
+            continue;
+
+            if($arr1[$i] == $arr1[$e]){
+                for($v=$e; $v < count($arr1)-1; $v++){
+                    $arr1[$v] = $arr1[$v+1];
+                }
+
+                array_pop($arr1);
+            }
+        }
+    }
+
+    return $arr1;
+}
+
+// print_r(dubremove($arr1));
+
 // echo "sum: ".ifArmstrong($arm);
 
 
@@ -109,6 +131,16 @@ echo "<p>
 echo "<p>
 <h2>6.	Write a PHP function that checks whether a passed string is a palindrome or not ?</h2>
 <p>" . $str2 . " => " . ifPalindrome($str2) . "</p>
+</p>";
+
+echo "<p>
+<h2>7.	Write a PHP function to remove duplicates from an array ?</h2>
+<p>" . $str2 . " => " . ifPalindrome($str2) . "</p>
+</p>";
+
+echo "<p>
+<h2>8.	Write a PHP function to remove duplicates from an array ?</h2>
+<p>";  print_r($arr1); echo " => ";  print_r(dubremove($arr1)); echo "</p>
 </p>";
 
   ?>
