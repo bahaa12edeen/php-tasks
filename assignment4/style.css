@@ -1,0 +1,40 @@
+#form{
+    width: 350px;
+    margin: 50px auto;
+    background-color: wheat;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.radio{
+    display: flex;
+    justify-content: center;
+}
+
+.frst{
+    margin-right: 20px;
+    margin-bottom: 25px;
+}
+
+#password{
+    width: 100%;
+}
+
+#email{
+    width: 100%;
+}
+
+.input{
+    margin-bottom: 25px;
+}
+
+input{
+    font-size: 22px;
+}
+
+#submit{
+    display: block;
+    margin: auto;
+    padding: 5px 10px;
+    cursor: pointer;
+}
