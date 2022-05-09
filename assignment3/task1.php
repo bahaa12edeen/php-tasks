@@ -35,6 +35,16 @@ function check_leap($year){
      
  }
 
+ function substr1($a, $b){
+    if(($a+$b) == 30){
+       return ($a+$b);
+    }else{
+       return "false";
+    }
+ }
+
+
+
 echo "<p>
         <h2>1.	Write a PHP script to see if the specified year is a leap year or not ?</h2>
         <p>" . $year . " => "; echo check_leap($year) . "</p>
@@ -51,10 +61,11 @@ echo "<p>
               $x=4; $y=13;
               echo "<p>" . $x." + ".$y . " => " . sum_cal($x, $y) . "</p>
       </p>";
-
+$a=15;
+$b = 16;
       echo "<p>
             <h2>4.	Write PHP to check if the sum of the two given numbers equals 30, if the condition is true the return their sum otherwise return false ?</h2>
-            <p>" . $date . " => " . substr(chunk_split($date,2,':'),0,-1) . "</p>
+            <p>" . $a." / ". $b . " => " . substr1($a, $b) . "</p>
       </p>";
 
 ?>
